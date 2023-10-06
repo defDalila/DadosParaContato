@@ -22,7 +22,57 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
+
+        .info-line {
+            display: flex;
+            /* Isso torna o container um flexbox */
+            justify-content: center;
+            /* Isso centraliza o conteúdo horizontalmente */
+            align-items: center;
+            /* Isso centraliza o conteúdo verticalmente */
+            padding: 10px 0;
+            /* Espaçamento vertical */
+        }
+
+        .label {
+            flex: 1;
+            /* Isso faz com que o label tome metade do espaço */
+            text-align: right;
+            /* Alinha o texto à direita */
+            padding-right: 20px;
+            /* Espaçamento entre o label e o dado */
+        }
+
+        .data {
+            flex: 1;
+            /* Isso faz com que os dados tomem a outra metade do espaço */
+            text-align: left;
+            /* Alinha o texto à esquerda */
+        }
+
+
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* Isso faz a imagem ficar circular */
+            overflow: hidden;
+            /* Garante que nada além do círculo seja mostrado */
+            margin: 0 auto;
+            /* Centraliza a imagem se o elemento pai estiver alinhado ao centro */
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Remove qualquer espaço extra abaixo da imagem */
+        }
+
+
 
         h1 {
             text-align: left;
@@ -50,26 +100,43 @@
             text-decoration: underline;
         }
 
-        .fab, .fas {
-        color: #FFB6C1; /* Rosa bebê */
-        margin-right: 10px; /* Espaçamento à direita para separar do texto/link */
-        font-size: 1.2em; /* Tamanho do ícone */
-    }
+        .fab,
+        .fas {
+            color: #FFB6C1;
+            /* Rosa bebê */
+            margin-right: 10px;
+            /* Espaçamento à direita para separar do texto/link */
+            font-size: 1.2em;
+            /* Tamanho do ícone */
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Contato </h1>
-        <ul>
-            <li><a href="mailto:dalila.fismed@gmail.com"><i class="fas fa-envelope"></i>
-                    dalila.fismed@gmail.com</a></li>
-            <li>Redes Sociais:  <a href="https://www.linkedin.com/in/defdalila/" target="_blank"><i
-                        class="fab fa-linkedin"></i></a> <a href="https://www.instagram.com/defdalila/" target="_blank"><i
-                        class="fab fa-instagram"></i></a> <a href="https://wa.me/5534991789529" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-            <li>Google Drive:  <a href="https://drive.google.com/drive/folders/1v902GWqdExJo086VB0PYS53TI82Iz7KE?usp=sharing" target="_blank"><i
-                        class="fab fa-google-drive"></i> Acesse aqui</a></li>
-        </ul>
+
+        <div class="profile-picture">
+            <img src="img\me.jpg" alt="Foto do rosto">
+        </div>
+
+        <div class="info-line">
+            <span class="label">E-mail:</span>
+            <span class="data"><a href="mailto:dalila.fismed@gmail.com"><i class="fas fa-envelope"></i>
+                dalila.fismed@gmail.com</a></span>
+        </div>
+
+        <div class="info-line">
+            <span class="label">Redes Sociais:</span>
+            <span class="data"><a href="https://www.linkedin.com/in/defdalila/" target="_blank"><i class="fab fa-linkedin"></i></a> <a
+                href="https://www.instagram.com/defdalila/" target="_blank"><i class="fab fa-instagram"></i></a> <a
+                href="https://wa.me/5534991789529" target="_blank"><i class="fab fa-whatsapp"></i></a></span>
+        </div>
+
+        <div class="info-line">
+            <span class="label">Google Drive :</span>
+            <span class="data"><a href="https://drive.google.com/drive/folders/1v902GWqdExJo086VB0PYS53TI82Iz7KE?usp=sharing" target="_blank"><i
+                    class="fab fa-google-drive"></i> Acesse aqui</a></span>
+        </div>
     </div>
 </body>
 
